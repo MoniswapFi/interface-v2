@@ -5,6 +5,7 @@ import "./styles/index.css";
 import App from "./App.tsx";
 import Header from "./components/header.tsx";
 import Footer from "./components/footer.tsx";
+import Trade from "./Trade.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -14,7 +15,7 @@ createRoot(document.getElementById("root")!).render(
         <main className="flex-grow overflow-auto">
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/trade" element={<App />} />
+            <Route path="/trade" element={<Trade />} />
             <Route path="/dashboard" element={<App />} />
             <Route path="/liquidity" element={<App />} />
             <Route path="/more" element={<App />} />

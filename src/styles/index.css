@@ -51,3 +51,36 @@
         var(--secondary-gradient-end)
     );
 }
+
+.gradient-border {
+    position: relative;
+}
+
+.gradient-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-gradient-start) 0%,
+        var(--primary-gradient-middle) 50%,
+        var(--primary-gradient-end) 100%
+    );
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.gradient-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background-color, #101014);
+    border-radius: inherit;
+    z-index: -1;
+}

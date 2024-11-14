@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import "./styles/index.css";
-
+import homeImage from "./assets/home.png";
 function App() {
+  console.log("homeImage:", homeImage);
   return (
     <>
       <div className="w-full flex justify-center">
@@ -117,6 +118,23 @@ function App() {
                   Join Discord
                 </button>
               </Link>
+            </div>
+          </div>
+
+          {/* Image section */}
+          <div className="py-12">
+            <div className="w-full max-w-7xl mx-auto">
+              <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden">
+                <div className="absolute inset-0 p-[1px] rounded-3xl bg-gradient-to-br from-orange-500 to-amber-300">
+                  <div className="absolute inset-[1px] rounded-[calc(1.5rem-1px)] overflow-hidden">
+                    <img
+                      src={homeImage}
+                      alt="Home"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
